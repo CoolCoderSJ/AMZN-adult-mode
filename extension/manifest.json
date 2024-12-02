@@ -1,0 +1,59 @@
+{
+    "manifest_version": 3,
+    "name": "AMZN Adult Mode",
+    "description": "Be more responsible with your purchases on amazon!",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "host_permissions": [
+        "*://*.amazon.com/*",
+        "*://*.amazon.in/*",
+        "*://*.amazon.ca/*",
+        "*://*.amazon.co.uk/*",
+        "*://*.amazon.de/*",
+        "*://*.amazon.es/*",
+        "*://*.amazon.fr/*",
+        "*://*.amazon.it/*",
+        "*://*.amazon.co.jp/*",
+        "*://*.amazon.cn/*",
+        "*://*.amazon.com.sig/*",
+        "*://*.amazon.com.mx/*",
+        "*://*.amazon.ae/*",
+        "*://*.amazon.com.br/*",
+        "*://*.amazon.nl/*",
+        "*://*.amazon.com.au/*",
+        "*://*.amazon.com.tr/*",
+        "*://*.amazon.sa/*",
+        "*://*.amazon.se/*",
+        "*://*.amazon.pl/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.amazon.com/*",
+                "*://*.amazon.in/*",
+                "*://*.amazon.ca/*",
+                "*://*.amazon.co.uk/*",
+                "*://*.amazon.de/*",
+                "*://*.amazon.es/*",
+                "*://*.amazon.fr/*",
+                "*://*.amazon.it/*",
+                "*://*.amazon.co.jp/*",
+                "*://*.amazon.cn/*",
+                "*://*.amazon.com.sig/*",
+                "*://*.amazon.com.mx/*",
+                "*://*.amazon.ae/*",
+                "*://*.amazon.com.br/*",
+                "*://*.amazon.nl/*",
+                "*://*.amazon.com.au/*",
+                "*://*.amazon.com.tr/*",
+                "*://*.amazon.sa/*",
+                "*://*.amazon.se/*",
+                "*://*.amazon.pl/*"
+            ],
+            "js": ["content.js"]
+        }
+    ]
+}
