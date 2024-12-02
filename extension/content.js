@@ -22,7 +22,7 @@ window.onload = () => {
             }
             console.log(bodyData)
             
-            fetch('http://localhost:3408/api/status', {
+            fetch('https://amzn-adult.shuchir.dev/api/status', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -43,8 +43,10 @@ window.onload = () => {
                     let innerText;
                     if (data.contactPts.length == 0) 
                         innerText = "Explain to 3 friends why you want to buy this product before adding to cart.";
-                    else 
+                    else if (data.contactPts.length - data.approvals.length > 0)
                         innerText = "Waiting for " + (data.contactPts.length - data.approvals.length) + " response(s) before you can add to cart.";
+                    else
+                        innerText = "Your friends have rejected your purchase. Perhaps it's time for better friends?";
 
                     addToCartDiv.innerHTML += `
                     <h3>Why are you buying this?</h3>
@@ -121,7 +123,7 @@ window.onload = () => {
                         let email2 = document.querySelector('#email2').value;
                         let email3 = document.querySelector('#email3').value;
                         let emails = [email1, email2, email3];
-                        fetch('http://localhost:3408/api/share', {
+                        fetch('https://amzn-adult.shuchir.dev/api/share', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json'
