@@ -10,7 +10,13 @@ It requires a user to get their purchase approved by at least 2/3 people before 
 - Server application to handle approval requests and email notifications.
 - MongoDB database to store user data and approval statuses.
 
-## Setup
+## Usage
+- Clone this repository (or donwload as ZIP + unzip)
+- Visit `chrome://extensions` and enable developer mode
+- Click Load Unpacked and choose the extension folder inside your cloned repo directory
+- Profit
+
+## Self Hosting
 
 ### Prerequisites
 
